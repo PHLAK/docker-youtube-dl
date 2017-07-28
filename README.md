@@ -8,7 +8,7 @@ Docker image for youtube-dl client.
 Running the Container
 ---------------------
 
-...
+    docker run -it --rm -v $PWD:/vol/output phlak/youtube-dl [options] <url>
 
 Troubleshooting
 ---------------
