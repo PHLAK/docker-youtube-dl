@@ -2,7 +2,7 @@ FROM alpine:3.6
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define youtube-dl version
-ARG YTDL_VERSION=2017.10.07
+ARG YTDL_VERSION=2017.10.15.1
 
 # Create non-root user
 RUN adduser -DHs /sbin/nologin youtube-dl
