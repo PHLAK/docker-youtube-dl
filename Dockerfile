@@ -1,5 +1,5 @@
 FROM alpine:3.9
-MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
+LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define youtube-dl version
 ARG YTDL_VERSION=2019.03.09
