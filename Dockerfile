@@ -2,7 +2,7 @@ FROM alpine:3.11.5
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define youtube-dl version
-ARG YTDL_VERSION=2020.03.24
+ARG YTDL_VERSION=2020.05.08
 
 # Create non-root user
 RUN adduser -DHs /sbin/nologin youtube-dl
