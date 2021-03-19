@@ -2,14 +2,13 @@ FROM alpine:3.13.2
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define youtube-dl version
-ARG YTDL_VERSION=2021.03.03
+ARG YTDL_VERSION=2021.03.14
 
 # Create non-root user
 RUN adduser -DHs /sbin/nologin youtube-dl
 
 # Create youtube-dl directories
-RUN mkdir -pv /vol/output \
-    && chown youtube-dl:youtube-dl /vol/output
+RUN mkdir -pv /vol/output && chown youtube-dl:youtube-dl /vol/output
 
 # Set youtube-dl archive URL
 ARG BINARY_URL=https://github.com/rg3/youtube-dl/releases/download/${YTDL_VERSION}/youtube-dl
@@ -30,4 +29,4 @@ VOLUME /vol/output
 WORKDIR /vol/output
 
 # Default command
-ENTRYPOINT ["youtube-dl"]
+ENTRYPOINT ["python3", "/usr/local/bin/youtube-dl"]
