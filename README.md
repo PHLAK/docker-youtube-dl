@@ -21,7 +21,15 @@ docker-youtube-dl
 Running the Container
 ---------------------
 
-    docker run -it --rm -v $PWD:/vol/output phlak/youtube-dl [options] <url>
+    docker run -it --rm -v "${PWD}:/vol/output phlak/youtube-dl" [options] <url>
+
+Bash Alias
+----------
+
+For convinience you may add the following bash alias. This will allow you to run
+`youtube-dl` from the command line without all the docker fluff.
+
+    alias youtube-dl='docker run -it --rm -v "${PWD}:/vol/output" phlak/youtube-dl'
 
 Troubleshooting
 ---------------
