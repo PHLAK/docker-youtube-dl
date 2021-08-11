@@ -28,7 +28,7 @@ jobs:
         id: extract-metadata
         uses: docker/metadata-action@v3
         with:
-          images: ${{ env.DOCKER_HUB_USER }}/syncthing
+          images: ${{ env.DOCKER_HUB_USER }}/youtube-dl
           tags: |
             type=raw,value=latest
             type=ref,event=tag
